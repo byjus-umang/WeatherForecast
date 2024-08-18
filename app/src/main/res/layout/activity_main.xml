@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/black_shade_1"
+    android:layout_height="match_parent">
+
+  <ProgressBar
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/idLoading"
+      android:layout_centerInParent="true"
+      android:visibility="visible"
+      />
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="gone"
+         android:id="@+id/idRLHome"
+         >
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:scaleType="centerCrop"
+             android:src="@color/black_shade_1"
+             android:id="@+id/idImageView"/>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="City_Name"
+             android:id="@+id/idTextView"
+             android:gravity="center"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             android:textSize="18dp"
+             android:paddingTop="20dp"
+             android:layout_marginTop="30dp"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:id="@+id/idLLCityName"
+             android:layout_below="@id/idTextView"
+             android:weightSum="5"
+             >
+             <EditText
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/idETCityName"
+                 android:layout_margin="10dp"
+                 android:layout_weight="4.5"
+                 android:background="@android:color/transparent"
+                 android:hint="Enter city name"
+                 android:padding="5dp"
+                 android:textColor="@color/white"
+                 android:textColorHint="@color/white"
+                 />
+
+
+
+
+
+
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/idIVsearch"
+    android:layout_weight="0.5"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/baseline_search_24"
+    android:tint="@color/white"
+    />
+
+</LinearLayout>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/idTeTV"
+    android:layout_below="@id/idLLCityName"
+    android:layout_margin="10dp"
+    android:gravity="center_horizontal"
+    android:padding="12dp"
+    android:text="23"
+    android:textColor="@color/white"
+    android:textSize="70dp"
+    />
+
+         <ImageView
+             android:id="@+id/idWeatherImage"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_below="@id/idTeTV"
+             android:layout_centerHorizontal="true"
+             android:layout_marginStart="10dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             android:src="@mipmap/ic_launcher" />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Wind"
+      android:id="@+id/TextViewWC"
+      android:layout_below="@id/idWeatherImage"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"/>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Today's forecast"
+
+             android:textColor="@color/white"
+             android:layout_above="@id/idTDWeather"
+
+             android:id="@+id/TodatTextView"/>
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/idTDWeather"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="30dp"
+          android:orientation="horizontal"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          />
+
+
+
+
+
+
+
+
+
+
+     </RelativeLayout>
+
+</RelativeLayout>
